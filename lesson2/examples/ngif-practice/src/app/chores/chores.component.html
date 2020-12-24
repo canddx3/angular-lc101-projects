@@ -1,14 +1,19 @@
-<div class="chores">
+<div class="chores" *ngIf ="chores.length > finishedChores.length || chores === [] || finishedChores *3 > chores; else noAllowance">
     <h3>Chores</h3>
+    <p>Work harder!</p>
     <ul>
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
     </ul>
 </div>
 <hr>
-<div class="doneChores">
+<div class="doneChores" > 
     <h3>Done Chores</h3>
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
+        <div>{{targetImage}}</div>
     </ul>
 </div>
+<ng-template #noAllowance>
+    <p>No allowance yet!</p>
+</ng-template>
 <hr>
