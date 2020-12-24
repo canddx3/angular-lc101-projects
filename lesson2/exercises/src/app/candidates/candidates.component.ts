@@ -1,3 +1,4 @@
+import { ɵngStyleDirectiveDef__POST_R3__ } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -23,10 +24,14 @@ export class CandidatesComponent implements OnInit {
   ngOnInit() {
   }
 
+  addToCrew(person: object) {
+      this.crew.push(person)
+    }
+  }
   // Code the addToCrew function here:
 
 
   // BONUS: Code the changeMissionName function here:
 
 
-}
+
